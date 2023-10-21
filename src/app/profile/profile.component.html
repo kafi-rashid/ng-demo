@@ -1,0 +1,10 @@
+<div class="form-group">
+    <form #userForm="ngForm" (ngSubmit)="submit()">
+        <input class="form-control" type="text" required name="username" [(ngModel)]="username">
+        <small>Username is required!</small>
+        <input class="form-control mt-3" type="text" required name="password" [(ngModel)]="password">
+        <small>Password is required!</small>
+        <br/>
+        <input class="btn btn-primary mt-3" type="submit" value="Submit" [disabled]="userForm.invalid">
+    </form>
+</div>
